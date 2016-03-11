@@ -1,0 +1,24 @@
+{
+  "name": "trip-planner",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "John Hill <john@proofpositiveimaging.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/johnhillphoto/travel-planner",
+  "moduleType": [
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1"
+  }
+}
