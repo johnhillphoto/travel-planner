@@ -14,7 +14,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/public', express.static(path.join(__dirname, 'public')));
-app.use('/vendor', express.static(path.join(__dirname, 'node_modules')));
+app.use('/vendor', express.static(path.join(__dirname, 'bower_components')));
 // app.use('/views', express.static(path.join(__dirname, 'views')));
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
