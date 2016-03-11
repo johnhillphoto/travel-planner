@@ -21,10 +21,16 @@ app.set('view engine', 'html');
 app.set('views', __dirname+'/views');
 app.use('/', routes);
 
+app.use(function(req, res, next){
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
 // custom error handling to remove stack trace
 app.use(function (err, req, res, next) {
-    console.log('      ' + err.message);
-    res.status(err.status || 500).end();
+    console.log('      ' + err);
+    // res.status(err.status || 500).end();
+    res.render('error', {error:err});
 });
 
 app.listen(3000, function(){
