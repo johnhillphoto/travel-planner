@@ -2,23 +2,26 @@
 {% block content %}
 <h2> Hello Travel Peoples! </h2>
 <span>Hotels:</span>
-<select name="selectHotel">
+<select name="selectHotel" class="input-field col s4">
   {% for hotel in hotels%}
     <option value="{{ hotel.name}}">{{ hotel.name}}</option>
   {% endfor %}
 </select>
 
 <span>Restaurants:</span>
-<select name="selectRestaurant">
+<select name="selectRestaurant" class="input-field col s4">
   {% for restaurant in restaurants%}
     <option value="{{ restaurant.name}}">{{ restaurant.name}}</option>
   {% endfor %}
 </select>
 
 <span>Activities:</span>
-<select name="selectActivity">
+<select name="selectActivity" class="input-field col s4">
   {% for activity in activities%}
     <option value="{{ activity.name}}">{{ activity.name}}</option>
   {% endfor %}
 </select>
+
+
+
 {% endblock %}
