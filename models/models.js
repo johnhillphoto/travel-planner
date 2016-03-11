@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/tp-1601F-db');
 
 var numChecker = function(num){
   // console.log(this);
