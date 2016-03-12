@@ -3,7 +3,7 @@
 
 var Promise = require('bluebird');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/tp-1601F-db');
+// mongoose.connect('mongodb://localhost/tp-1601F-db');
 var db = require('./models/models');
 var models = db.models;
 var Place = models.Place;

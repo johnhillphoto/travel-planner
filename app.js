@@ -3,6 +3,8 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var swig = require('swig');
 var path = require('path');
+// var sass = require('node-sass-middleware'); // call sass-middleware - dev
+
 swig.setDefaults({cache: false});
 
 var routes = require('./routes');
@@ -20,6 +22,16 @@ app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname+'/views');
 app.use('/', routes);
+
+// middleware to compile sass on changes
+// app.use(sass({
+//   src: __dirname + '/assets',
+//   dest: __dirname + '/public',
+//   debug: true,
+//   outputStyle: 'compressed'
+// }));
+
+
 
 app.use(function(req, res, next){
   var err = new Error('Not Found');
