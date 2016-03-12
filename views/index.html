@@ -1,27 +1,69 @@
 {% extends 'layout.html' %}
 {% block content %}
-<h2> Hello Travel Peoples! </h2>
-<span>Hotels:</span>
-<select name="selectHotel" class="input-field col s4">
-  {% for hotel in hotels%}
-    <option value="{{ hotel.name}}">{{ hotel.name}}</option>
-  {% endfor %}
-</select>
+<div class="row yellow">
+  <div class="col l8 no-left-padding">
+    <img src="/public/images/map.png" id="map">
+  </div>  <!-- end col 8 -->
 
-<span>Restaurants:</span>
-<select name="selectRestaurant" class="input-field col s4">
-  {% for restaurant in restaurants%}
+  <div class="col l4 yellow height100">
+    <!-- <span>Hotels:</span> -->
+    <row>
+    <div class="my-panel">
+      <div class="col l10">
+    <select name="selectHotel" class="input-field col s1 m4 l10 center">
+      <option value="" disabled selected>Choose your Hotel</option>
+      {% for hotel in hotels%}
+        <option value="{{ hotel.name}}">{{ hotel.name}}</option>
+      {% endfor %}
+    </select>
+    </div>
+    <div class="col l2">
+    <a class="btn-floating btn-small waves-effect waves-light yellow col "><i class="material-icons">local_hotel</i></a>
+  </div>
+
+  <div class="col l10">
+<select name="selectRestaurant" class="input-field col s1 m4 l10 center">
+  <option value="" disabled selected>Choose your Restaurant</option>
+  {%  for restaurant in restaurants %}
     <option value="{{ restaurant.name}}">{{ restaurant.name}}</option>
   {% endfor %}
 </select>
+</div>
+<div class="col l2">
+<a class="btn-floating btn-small waves-effect waves-light yellow col "><i class="material-icons">local_dining</i></a>
+</div>
 
-<span>Activities:</span>
-<select name="selectActivity" class="input-field col s4">
-  {% for activity in activities%}
-    <option value="{{ activity.name}}">{{ activity.name}}</option>
-  {% endfor %}
-</select>
+<div class="col l10 leftPadding">
+  <select name="selectActivity" class="input-field col col s1 m4 l10 center">
+    <option value="" disabled selected>Choose your Activity</option>
+    {% for activity in activities%}
+      <option value="{{ activity.name}}">{{ activity.name}}</option>
+    {% endfor %}
+  </select></div>
+<div class="col l2">
+<a class="btn-floating btn-small waves-effect waves-light yellow col "><i class="material-icons">local_activity</i></a>
+</div>
 
+
+
+  </row>
+
+
+  </div>
+  <div class = "my-panel flex">
+    <div class ="travelChoices">
+      <h6>My Hotel</h6>
+    </div>
+    <div class ="travelChoices">
+      <h6>My Restaurants</h6>
+    </div>
+    <div class ="travelChoices">
+      <h6>My Activities</h6>
+    </div>
+
+  </div>
+  </div>  <!-- end col 4 -->
+</div><!-- end row -->
 
 
 {% endblock %}

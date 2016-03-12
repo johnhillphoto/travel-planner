@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <!--Import Google Icon Font-->
       <!-- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-      <!-- <link href="/public/font/material-design-icons" rel="stylesheet"> -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="/public/stylesheets/materialize.css"  media="screen,projection"/>
-      <!-- <link type="text/css" rel="stylesheet" href="/public/stylesheets/styles.css"/> -->
+      <link type="text/css" rel="stylesheet" href="/public/stylesheets/styles.css"/>
     <title>Title</title>
     <!-- http://localhost:3000/vendor/bootstrap/dist/css/bootstrap.min.css -->
 
@@ -15,6 +15,16 @@
 
   </head>
   <body>
+    <nav>
+      <div class="nav-wrapper blue">
+        <a href="#" class="brand-logo right">Travel Planner</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">JavaScript</a></li>
+        </ul>
+      </div>
+    </nav>
     {% block content %}
 
     {% endblock %}
