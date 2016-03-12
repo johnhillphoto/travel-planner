@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build-css": "node-sass -w -r assets/stylesheets -o public/stylesheets",
-    "start": "npm run build-css & nodemon -e html,css,js app.js"
+    "build-css": "node-sass -r assets/stylesheets -o public/stylesheets",
+    "monitor": "nodemon -e html,css,js app.js",
+    "start": "npm-run-all --parallel build-css monitor"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "mongoose": "^4.4.6",
     "morgan": "^1.7.0",
     "node-sass-middleware": "^0.9.7",
+    "npm-run-all": "^1.5.2",
     "swig": "^1.4.2"
   },
   "devDependencies": {
